@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.zyn.safeguard">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".Activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.SettingActivity" />
+        <dialog android:name=".Dialog.DialogPwdCofirm" />
+        <activity
+            android:name=".Activity.GuidingActivity"
+            android:label="@string/title_activity_guiding"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity android:name=".Activity.Setup1Activity" />
+        <activity android:name=".Activity.Setup2Activity" />
+        <activity android:name=".Activity.Setup3Activity" />
+        <activity android:name=".Activity.Setup4Activity" />
+        <activity android:name=".Activity.LostFindActivity" />
+        <activity android:name=".Activity.PermissionsActivity"/>
+        <activity android:name=".Activity.ContactNameActivity"/>
+
+        <receiver android:name=".receiver.BootCompleteReceiver" >
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED" />
+        </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

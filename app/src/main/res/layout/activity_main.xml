@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.zyn.safeguard.Activity.MainActivity">
+
+    <com.example.zyn.safeguard.View.FocusedTextview
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="我已经超过了边界，求你让我转起来好不好,我已经超过了边界，求你让我转起来好不好,我已经超过了边界，求你让我转起来好不好，我已经超过了边界，求你让我转起来好不好"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+
+        />
+    <GridView
+        android:id="@+id/gvMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:gravity="center_vertical"
+        android:verticalSpacing="60dp"></GridView>
+</LinearLayout>
